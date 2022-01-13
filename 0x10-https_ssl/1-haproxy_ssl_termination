@@ -31,7 +31,7 @@ frontend www-https
     default_backend www-backend
 
 backend www-backend
-    balance  roundrobin
+    balance  319-lb-01
     redirect scheme https if !{ ssl_fc }
     server 319-web-01 34.138.8.26:80 check
     server 319-web-02 35.170.75.58:80 check
